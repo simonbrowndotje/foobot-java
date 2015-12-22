@@ -1,4 +1,4 @@
-package io.foobot;
+package io.foobot.util;
 
 import io.foobot.domain.AirQualitySample;
 import io.foobot.util.AirQualitySampleCsvParser;
