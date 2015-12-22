@@ -1,0 +1,39 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.apache.httpcomponents:httpclient:4.3.6'
+    compile 'commons-logging:commons-logging:1.1.3'
+
+    testCompile 'junit:junit:4.12'
+}
+
+description = 'Java client for Foobot API'
+group = 'io.foobot'
+version = '0.0.1'
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+    }
+    test {
+        java {
+            srcDir 'test'
+        }
+    }
+}
+
+mainClassName = 'io.foobot.Main'
+
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
